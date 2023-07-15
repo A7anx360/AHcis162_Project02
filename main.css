@@ -48,7 +48,15 @@ section > h1 {
 section > * {outline: 5px dotted blue}*/
 
 /*Main Header*/
-header {background-color: royalblue; font-family: Rockwell; text-align: center;}
+header {background-color: royalblue;}
+
+header > img {
+	display: block;
+	box-sizing: border-box;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 /*Other Headers*/
 h1 {color: white;}
