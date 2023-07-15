@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+/*
+Written by: Alan Hernandez
+Date Written: July 14, 2023
+*/
+
+/*HTML Settings of Some Sort*/
+html {height: 100%;}
+
+/*Body*/
+body {
+	display: grid;
+	grid-template-columns: 250px 2fr 1fr;
+	/*grid-template-rows: 50px 100px 150px;
+	grid-template-areas: "header header"
+						 "footer footer";
+	grid-column-gap: 15%;*/
+	background-color: rgb(62, 62, 62);
+	font-family: Segoe, Verdana, sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	min-height: 100%;
+	max-width: 960px;
+	min-width: 640px;
+}
+
+body > header {
+	grid-row: 1;
+	grid-column: 1/-1;
+}
+/*
+body > section {grid-area: sections;}
+body > footer {grid-area: footer;}
+
+section {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+section > h1 {
+	grid-area:1/1/2/3;
+}*/
+
+/*Code used to physically define rows and columns.*/
+/*body > * {outline: 5px dashed red}
+section > * {outline: 5px dotted blue}*/
+
+/*Main Header*/
+header {background-color: royalblue; font-family: Rockwell; text-align: center;}
+
+/*Other Headers*/
+h1 {color: white;}
+h2 {font-family: Rockwell;}
+h3 {font-family: Rockwell;}
+
+/*Controls the placement of the navigation bar.*/
+nav {
+	grid-row: 2;
+	grid-column: 1/-1;
+}
+
+/*Creates a navigation bar along with it's buttons.*/
+nav > ul {
+	line-height: 1.8em;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color:midnightblue;
+	font-family: Rockwell;
+	font-size: 1.3em;
+}
+
+/*Aligns & organizes the navigation buttons in a horizontal layout*/
+li a {
+	width: 15.5%;
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 12px 16px;
+	text-decoration: none;
+}
+
+/* Changes the link color to  when the mouse hovers over each Button*/
+li a:hover {
+	background-color: rgb(0, 0, 60);
+    color: rgb(255, 244, 148);
+}
+
+/*Sections*/
+section {background-color: rgb(135, 206, 250); width: 75%; font-size: 1.2em;}
+
+/*Left Section*/
+section#left{
+	grid-row: 4;
+	grid-column: 1;
+	width: 45.2%;
+	padding: 1.2em;
+}
+
+/*Right Section*/
+section#right{
+	grid-row: 4;
+	grid-column: 2;
+	width: 45.2%;
+	padding: 1.2em;
+}
+
+/*Image within a Section*/
+/*section > img{box-sizing: border-box; display: block; width: 100%; padding: 0.2em;}*/
+
+/*Manages the screen position of the "mainbanner" Section*/
+section#mainbanner {
+	margin-left: auto;
+	margin-right: auto;
+	grid-row: 3;
+	grid-column: 1/-1;
+}
+
+/*Image within a Section called "mainbanner"*/
+section#mainbanner > img{
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+}
+
+/*Footer*/
+footer {
+	grid-row: 5;
+	grid-column: 1/-1;
+	box-sizing: border-box;
+	width: 100%;
+	background-color: royalblue;
+}
+	
+footer > a {
+	color: white;
+	padding: 1.2em;
+}
