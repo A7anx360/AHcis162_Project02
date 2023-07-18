@@ -2,7 +2,7 @@
 
 /*
 Written by: Alan Hernandez
-Date Written: July 14, 2023
+Date Written: July 18, 2023
 */
 
 /*HTML Settings of Some Sort*/
@@ -12,10 +12,13 @@ html {height: 100%;}
 body {
 	display: grid;
 	grid-template-columns: 250px 2fr 1fr;
-	/*grid-template-rows: 50px 100px 150px;
-	grid-template-areas: "header header"
-						 "footer footer";
-	grid-column-gap: 15%;*/
+	grid-template-rows: 115px 62px 230px 250px 64px;
+	grid-template-areas: "header header header"
+						 "nav nav nav"
+						 "section section section"
+						 "section section section"
+						 "footer footer footer";
+	/*grid-column-gap: 15%;*/
 	background-color: rgb(62, 62, 62);
 	font-family: Segoe, Verdana, sans-serif;
 	margin-left: auto;
@@ -26,7 +29,7 @@ body {
 	min-width: 640px;
 }
 
-body > header {
+body > header{
 	grid-row: 1;
 	grid-column: 1/-1;
 }
@@ -102,26 +105,7 @@ li a:hover {
 }
 
 /*Sections*/
-section {background-color: rgb(135, 206, 250); width: 75%; font-size: 1.2em;}
-
-/*Left Section*/
-section#left{
-	grid-row: 4;
-	grid-column: 1;
-	width: 45.2%;
-	padding: 1.2em;
-}
-
-/*Right Section*/
-section#right{
-	grid-row: 4;
-	grid-column: 2;
-	width: 45.2%;
-	padding: 1.2em;
-}
-
-/*Image within a Section*/
-/*section > img{box-sizing: border-box; display: block; width: 100%; padding: 0.2em;}*/
+section {background-color: rgb(135, 206, 250); width: 100%; font-size: 1.2em;}
 
 /*Manages the screen position of the "mainbanner" Section*/
 section#mainbanner {
@@ -139,16 +123,30 @@ section#mainbanner > img{
 	width: 100%;
 }
 
+/*Left Section*/
+section#left{
+	grid-row: 5;
+	grid-column: 1;
+	padding: 1.2em;
+}
+
+/*Right Section*/
+section#right{
+	grid-row: 5;
+	grid-column: 1;
+	padding: 1.2em;
+}
+
 /*Footer*/
 footer {
-	grid-row: 5;
+	grid-row: 7;
 	grid-column: 1/-1;
 	box-sizing: border-box;
-	width: 100%;
 	background-color: royalblue;
+	padding: 20px 25px;
 }
 	
 footer > a {
 	color: white;
-	padding: 1.2em;
+	padding: 1.6em;
 }
