@@ -2,7 +2,8 @@
 
 /*
 Written by: Alan Hernandez
-Date Written: July 18, 2023
+Date Written: July 14, 2023
+Date Modified: July 21, 2023
 */
 
 /*HTML Settings of Some Sort*/
@@ -11,40 +12,35 @@ html {height: 100%;}
 /*Body*/
 body {
 	display: grid;
-	grid-template-columns: 250px 2fr 1fr;
-	grid-template-rows: 115px 62px 230px 250px 64px;
+	grid-auto-columns: 32.5% 32.5% 32.5%;
+	grid-auto-rows: 125px 62px auto auto auto 64px;
 	grid-template-areas: "header header header"
 						 "nav nav nav"
-						 "section section section"
-						 "section section section"
+						 "misc misc misc"
+						 "contentl contentm contentr"
+						 "contenta contentb contentc"
 						 "footer footer footer";
 	/*grid-column-gap: 15%;*/
 	background-color: rgb(62, 62, 62);
 	font-family: Segoe, Verdana, sans-serif;
 	margin-left: auto;
 	margin-right: auto;
-	width: 95%;
 	min-height: 100%;
 	max-width: 960px;
 	min-width: 640px;
 }
 
-body > header{
-	grid-row: 1;
-	grid-column: 1/-1;
-}
-/*
-body > section {grid-area: sections;}
-body > footer {grid-area: footer;}
-
-section {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-}
-
-section > h1 {
-	grid-area:1/1/2/3;
-}*/
+/*Defines Grid Areas*/
+header {grid-area: header;}
+nav {grid-area: nav;}
+section#mainbanner {grid-area: misc;}
+section#left {grid-area: contentl;}
+section#middle {grid-area: contentm;}
+section#right {grid-area: contentr;}
+section#characters {grid-area: contenta;}
+section#racetracks {grid-area: contentb;}
+section#gamemodes{grid-area: contentc;}
+footer {grid-area: footer;}
 
 /*Code used to physically define rows and columns.*/
 /*body > * {outline: 5px dashed red}
@@ -62,7 +58,7 @@ header > img {
 }
 
 /*Other Headers*/
-h1 {color: white;}
+h1 {font-family: Rockwell;}
 h2 {font-family: Rockwell;}
 h3 {font-family: Rockwell;}
 
@@ -105,7 +101,11 @@ li a:hover {
 }
 
 /*Sections*/
-section {background-color: rgb(135, 206, 250); width: 100%; font-size: 1.2em;}
+section {
+	background-color: rgb(135, 206, 250);
+	width: 100%;
+	font-size: 1.2em;
+}
 
 /*Manages the screen position of the "mainbanner" Section*/
 section#mainbanner {
@@ -125,22 +125,70 @@ section#mainbanner > img{
 
 /*Left Section*/
 section#left{
-	grid-row: 5;
-	grid-column: 1;
-	padding: 1.2em;
+	padding: 0em;
+	background-color: royalblue;
+	color: white;
+}
+
+/*Middle Section*/
+section#middle{
+	padding: 0em;
+	background-color: royalblue;
+	color: white;
 }
 
 /*Right Section*/
 section#right{
-	grid-row: 5;
-	grid-column: 1;
-	padding: 1.2em;
+	padding: 0em;
+	background-color: royalblue;
+	color: white;
+}
+
+/*This code needs to be implimented properly!*/
+/*div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+*/
+
+/*Characters Section*/
+section#characters{
+	padding: 0em;
+}
+
+/*Racetracks Section*/
+section#racetracks{
+	padding: 0em;
+}
+
+/*Racetracks Section*/
+section#gamemodes{
+	padding: 0em;
+}
+
+/*Racetracks Section*/
+section#logsignform{
+	padding: 1em;
 }
 
 /*Footer*/
 footer {
-	grid-row: 7;
-	grid-column: 1/-1;
 	box-sizing: border-box;
 	background-color: royalblue;
 	padding: 20px 25px;
