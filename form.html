@@ -4,29 +4,50 @@
 <!--
 Written By: Alan Hernandez
 Date Written: July 21, 2023
+Date Modified: July 26, 2023
 -->
 
 <!--Page Head Title, and Metadata-->
 	<head>
 		<meta name="keywords" content="Parfait, Dog, Rocket, Racing, Home, Customersupport, Game, Videogame"/>
 		<meta charset="UTF-8" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 		<link href="main.css" rel="stylesheet">
 		<title>Parfait's Rocket-Fueled Racing, Sign Up/Log In</title>
 	</head>
 
 <!--Page Body-->
 	<body>
+<!--Weird Bootstrap Script-->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
 <!--Main Header-->
 		<header><img src="ParfaitsRocketRace_CoolLogo.png" alt="An unreasonably gritty logo to advertise a silly racing game." /></header>
+
 <!--Navigation Menu-->
-		<nav>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="#">Characters</a></li>
-				<li><a href="#">Racetracks</a></li>
-				<li><a href="#">Game Modes</a></li>
-				<li><a href="form.html">Buy Now</a></li>
-			</ul>
+		<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+			<div class="container">
+				<a href="index.html" class="navbar-brand">Home</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navmenu">
+					<ul class="navbar-nav ms-auto"><!--ms-auto might be removed.-->
+						<li class="nav-item">
+							<a href="characters.html" class="nav-link">Characters</a>
+						</li>
+						<li class="nav-item">
+							<a href="racetracks.html" class="nav-link">Racetracks</a>
+						</li>
+						<li class="nav-item">
+							<a href="gamemodes.html" class="nav-link">Game Modes</a>
+						</li>
+						<li class="nav-item">
+							<a href="form.html" class="nav-link">Buy Now</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</nav>
 
 <!--Banner Section-->
@@ -34,9 +55,6 @@ Date Written: July 21, 2023
 			<h1>Sign Up/Log In</h1>
 			<p>Disclaimer: All users must Sign-Up or Log-In before purchasing the game or contacting customer support.</p>
 			<form>
-<!--"I am NOT a Robot" Check Box-->
-				<input type="checkbox" id="ruarobot" name="ruarobot" value="notrobot">
-				<label for="ruarobot"> I am NOT a robot.</label><br>
 <!--First Name-->
 				<label for="fname">First name:</label><br>
 				<input type="text" id="fname" name="fname"><br>
@@ -49,6 +67,10 @@ Date Written: July 21, 2023
 <!--Date of Birth-->
 				<label for="bdaymonth">Birthday (month and year):</label>
 				<input type="month" id="bdaymonth" name="bdaymonth">
+				
+<!--"I am NOT a Robot" Check Box-->
+				<input type="checkbox" id="ruarobot" name="ruarobot" value="notrobot">
+				<label for="ruarobot"> I am NOT a robot! (That's a very insulting assumption to make.)</label><br>
 	
 <!--Submit Button-->
 				<input type="submit" value="Submit">

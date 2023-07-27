@@ -3,7 +3,7 @@
 /*
 Written by: Alan Hernandez
 Date Written: July 14, 2023
-Date Modified: July 21, 2023
+Date Modified: July 26, 2023
 */
 
 /*HTML Settings of Some Sort*/
@@ -13,7 +13,7 @@ html {height: 100%;}
 body {
 	display: grid;
 	grid-auto-columns: 32.5% 32.5% 32.5%;
-	grid-auto-rows: 125px 62px auto auto auto 64px;
+	grid-auto-rows: 125px auto auto auto auto 64px;
 	grid-template-areas: "header header header"
 						 "nav nav nav"
 						 "misc misc misc"
@@ -158,7 +158,7 @@ div.gallery:hover {
 
 div.gallery img {
   width: 100%;
-  height: auto;
+  height: a uto;
 }
 
 div.desc {
@@ -197,4 +197,58 @@ footer {
 footer > a {
 	color: white;
 	padding: 1.6em;
+}
+
+/*Sign Up/Log In Form*/
+section#logsignform{
+	grid-area: misc;
+	width: 100%;
+}
+
+input[type=text] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 2px solid red;
+}
+
+input[type=email] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 2px solid red;
+}
+
+input[type=month] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 2px solid red;
+}
+
+input[type=checkbox] {
+	width: 10%;
+	margin: 0px 0;
+	box-sizing: border-box;
+}
+
+input[type=submit] {
+	width: 35%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	font-family: Segoe, Verdana, sans-serif;
+	background-color: #89F567;
+	color: Black;
+}
+
+input[type=submit]:hover {
+	background-color: #2DA30A;
+	color: white;
 }

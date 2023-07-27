@@ -4,35 +4,55 @@
 <!--
 Written By: Alan Hernandez
 Date Written: July 14, 2023
-Date Modified: July 21, 2023
+Date Modified: July 26, 2023
 -->
 
 <!--Page Head Title, and Metadata-->
 	<head>
 		<meta name="keywords" content="Parfait, Dog, Rocket, Racing, Home, Main, Game, Videogame"/>
 		<meta charset="UTF-8" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 		<link href="main.css" rel="stylesheet">
 		<title>Parfait's Rocket-Fueled Racing, Main</title>
 	</head>
 
 <!--Page Body-->
 	<body>
+<!--Weird Bootstrap Script-->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+		
 <!--Main Header-->
 		<header><img src="ParfaitsRocketRace_CoolLogo.png" alt="An unreasonably gritty logo to advertise a silly racing game." /></header>
+
 <!--Navigation Menu-->
-		<nav>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="#">Characters</a></li>
-				<li><a href="#">Racetracks</a></li>
-				<li><a href="#">Game Modes</a></li>
-				<li><a href="form.html">Buy Now</a></li>
-			</ul>
+		<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+			<div class="container">
+				<a href="index.html" class="navbar-brand">Home</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navmenu">
+					<ul class="navbar-nav ms-auto"><!--ms-auto might be removed.-->
+						<li class="nav-item">
+							<a href="characters.html" class="nav-link">Characters</a>
+						</li>
+						<li class="nav-item">
+							<a href="racetracks.html" class="nav-link">Racetracks</a>
+						</li>
+						<li class="nav-item">
+							<a href="gamemodes.html" class="nav-link">Game Modes</a>
+						</li>
+						<li class="nav-item">
+							<a href="form.html" class="nav-link">Buy Now</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</nav>
 
 <!--Banner Section-->
 		<section id="mainbanner">
-			<img src="ParfaitRacing_MainBanner.png" alt="A silly cartoon drawing of a dog in a go-kart with fireworks in the background." />
+			<img src="ParfaitRacing_MainBanner.jpg" alt="A silly cartoon drawing of a dog in a go-kart." />
 		</section>
 
 <!--Left Section-->
@@ -56,25 +76,42 @@ Date Modified: July 21, 2023
 <!--Characters Section-->
 		<section id="characters">
 <!--Header-->
-			<h3>Wacky Characters!</h3>
+			<h3>Crazy Characters!</h3>
 <!--Image-->
+			<!--<img src="#" alt="#" />-->
 	<div class="gallery">
-	<a target="_blank" href="Parfait.png">
-		<img src="Parfait.png" alt="Weird Dog" width="128px" height="128px">
+	<a target="_blank" href="Parfait.jpg">
+		<img src="Parfait.jpg" alt="Weird Dog" width="128" height="128">
+		<div class="desc">Parfait</div>
 	</a>
-	<div class="desc">Parfait: A silly dog that figured out how to drive cars somehow.</div>
 </div>
 
 <div class="gallery">
-	<a target="_blank" href="Lucy.png">
-		<img src="Lucy.png" alt="Shy Girl" width="128px" height="128px">
+	<a target="_blank" href="Blondie.jpg">
+		<img src="Blondie.jpg" alt="Evil Dog" width="128" height="128">
+		<div class="desc">Blondie</div>
 	</a>
-	<div class="desc">Lucy: A shy girl from a random island known as insel-shima.</div>
 </div>
+
+<div class="gallery">
+	<a target="_blank" href="Luna.jpg">
+		<img src="Luna.jpg" alt="Annoying Hamster" width="128" height="128">
+		<div class="desc">Luna</div>
+	</a>
+</div>
+
+<div class="gallery">
+	<a target="_blank" href="Squinky.jpg">
+		<img src="Squinky.jpg" alt="Rabbot Genius" width="128" height="128">
+		<div class="desc">Squinky</div>
+	</a>
+</div>
+
+<!--<div class="desc">Image Description</div>-->
 
 <!--A paragragh advertising the playable characters featured in the game.-->
 			<p>
-			Description A
+			Caption and Link to "Characters" page will go here.
 			</p>
 <!--A link inviting users to check out more of the playable characters featured in the game.-->
 		</section>
@@ -87,7 +124,7 @@ Date Modified: July 21, 2023
 			<!--<img src="#" alt="#" />-->
 <!--A paragragh advertising the playable racetracks featured in the game.-->
 			<p>
-			Description B
+			An Image and a Caption go here.
 			</p>
 <!--A link inviting users to check out more of the playable racetracks featured in the game.-->
 		</section>
@@ -100,7 +137,7 @@ Date Modified: July 21, 2023
 			<!--<img src="#" alt="#" />-->
 <!--A paragragh advertising the playable game modes featured in the game.-->
 			<p>
-			Description C
+			Another Image and Caption go here.
 			</p>
 <!--A link inviting users to check out more of the playable game modes featured in the game.-->
 		</section>
