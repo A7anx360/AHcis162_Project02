@@ -252,3 +252,22 @@ input[type=submit]:hover {
 	background-color: #2DA30A;
 	color: white;
 }
+
+section#characterpage {
+	grid-area: misc;
+	width: 100%;
+}
+
+section#racetrackpage {
+	grid-area: misc;
+	width: 100%;
+}
+
+section#gamemodepage {
+	grid-area: misc;
+	width: 100%;
+}
+
+section > div {
+	float: left;
+}
